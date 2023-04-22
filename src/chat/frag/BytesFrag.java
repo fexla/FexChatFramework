@@ -10,6 +10,13 @@ import java.io.OutputStream;
 public class BytesFrag extends DataFrag {
     public byte[] bytes;
 
+    public BytesFrag() {
+    }
+
+    public BytesFrag(byte[] bytes) {
+        this.bytes = bytes;
+    }
+
     @Override
     public FragType getType() {
         return FragType.BYTES;
