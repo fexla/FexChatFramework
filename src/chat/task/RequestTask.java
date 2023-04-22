@@ -44,12 +44,12 @@ public class RequestTask extends Task {
     }
 
     @Override
-    public void Start(Session manager) {
-        manager.SendRequestPkg(this, sendPkg, requestKey);
+    public void Start(Session session) {
+        session.SendRequestPkg(this, sendPkg, requestKey);
     }
 
     @Override
-    public void Handle(Session manager, DataFrag data) {
+    public void Handle(Session session, DataFrag data) {
         replyHandler.accept(data);
         isAlreadyGetReply = true;
     }

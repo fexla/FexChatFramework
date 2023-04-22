@@ -14,14 +14,14 @@ public abstract class Task {
 
     public abstract boolean IsActive();
 
-    public abstract void Start(Session manager);
+    public abstract void Start(Session session);
 
     /**
      * 处理这个Task收到的数据
      *
      * @param data 远程发送过来的数据
      */
-    public abstract void Handle(Session manager, DataFrag data);
+    public abstract void Handle(Session session, DataFrag data);
 
     public abstract void Interrupt();
 }
